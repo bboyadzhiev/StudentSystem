@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CodeFirst.Models.Course">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <AssociationLine Name="StudentsCourses" Type="CodeFirst.Models.StudentCourse" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.75" Y="3.209" />
+        <Point X="1.75" Y="4.436" />
+        <Point X="2.25" Y="4.436" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.161" Y="0.945" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AEAAACAAAAAgAAAAAAEAAAQAAAAAAAQAAAAIAQAAAAA=</HashCode>
+      <FileName>Course.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="StudentsCourses" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CodeFirst.Models.StudentCourse">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAQAAAAAAAAIAAAAQAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>StudentCourse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodeFirst.Models.Student">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <AssociationLine Name="StudentCourses" Type="CodeFirst.Models.StudentCourse" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.25" Y="2.569" />
+        <Point X="4.25" Y="4.436" />
+        <Point X="3.75" Y="4.436" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.473" Y="1.279" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAEAAAAAAAAAAAAAAAAAAQAAABA=</HashCode>
+      <FileName>Student.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="StudentCourses" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

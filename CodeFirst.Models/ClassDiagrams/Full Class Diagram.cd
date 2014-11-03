@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CodeFirst.Models.Course">
+    <Position X="3.25" Y="5.75" Width="1.5" />
+    <AssociationLine Name="Exercises" Type="CodeFirst.Models.Exercise">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.445" Y="0.048" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Homeworks" Type="CodeFirst.Models.Homework">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.63" Y="-1.19" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Lecturers" Type="CodeFirst.Models.Lecturer" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="7" />
+        <Point X="6.676" Y="7" />
+        <Point X="6.676" Y="5.483" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.112" Y="1.287" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="StudentsCourses" Type="CodeFirst.Models.StudentCourse">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.607" Y="-2.682" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AEAAACAAAAAgAAAAAAEAAAQAAAAAAAQAAAAIAQAAAAA=</HashCode>
+      <FileName>Course.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Exercises" />
+      <Property Name="Homeworks" />
+      <Property Name="Lecturers" />
+      <Property Name="StudentsCourses" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CodeFirst.Models.Exercise">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <AssociationLine Name="Course" Type="CodeFirst.Models.Course">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.622" Y="0.037" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Students" Type="CodeFirst.Models.Student" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.484" Y="5.25" />
+        <Point X="1.484" Y="0.938" />
+        <Point X="5.75" Y="0.938" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="3.487" Y="-4.182" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAIAAABAAAAAAAAAAMAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exercise.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Course" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Students" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CodeFirst.Models.Homework">
+    <Position X="4.5" Y="3.25" Width="1.5" />
+    <AssociationLine Name="Student" Type="CodeFirst.Models.Student" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.32" Y="3.25" />
+        <Point X="5.32" Y="2.367" />
+        <Point X="6.25" Y="2.367" />
+        <Point X="6.25" Y="1.992" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.164" Y="0.985" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Course" Type="CodeFirst.Models.Course">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.693" Y="1.508" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQQAAAAAAAAIAAAASAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Homework.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Student" />
+      <Property Name="Course" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CodeFirst.Models.Lecturer">
+    <Position X="6.25" Y="4.25" Width="1.5" />
+    <AssociationLine Name="Title" Type="CodeFirst.Models.Title" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.75" Y="5.312" />
+        <Point X="8.438" Y="5.312" />
+        <Point X="8.438" Y="6.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.133" Y="0.954" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Courses" Type="CodeFirst.Models.Course" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.125" Y="5.483" />
+        <Point X="7.125" Y="7.562" />
+        <Point X="4.75" Y="7.562" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="2.341" Y="1.798" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Lecturer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Title" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Courses" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CodeFirst.Models.Person">
+    <Position X="8.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAEAAAAAAAAAEAEAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodeFirst.Models.Student">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Homeworks" Type="CodeFirst.Models.Homework" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.75" Y="1.884" />
+        <Point X="4.891" Y="1.884" />
+        <Point X="4.891" Y="3.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.838" Y="1.372" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Exercises" Type="CodeFirst.Models.Exercise" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.75" Y="0.721" />
+        <Point X="0.968" Y="0.721" />
+        <Point X="0.968" Y="5.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-4.65" Y="4.57" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="StudentsCourses" Type="CodeFirst.Models.StudentCourse" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.75" Y="1.275" />
+        <Point X="2.75" Y="1.275" />
+        <Point X="2.75" Y="2.75" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-2.921" Y="1.539" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAEAAAAAAAAAAAAAAAAIAQAAAAA=</HashCode>
+      <FileName>Student.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Homeworks" />
+      <Property Name="Exercises" />
+      <Property Name="StudentsCourses" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CodeFirst.Models.StudentCourse">
+    <Position X="2" Y="2.75" Width="1.5" />
+    <AssociationLine Name="Course" Type="CodeFirst.Models.Course" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.625" Y="4.238" />
+        <Point X="2.625" Y="5.937" />
+        <Point X="3.25" Y="5.937" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.098" Y="1.425" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Student" Type="CodeFirst.Models.Student" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.188" Y="2.75" />
+        <Point X="3.188" Y="1.607" />
+        <Point X="5.75" Y="1.607" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.831" Y="-1.005" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAQAAAAAAAAIAAAAQAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>StudentCourse.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Course" />
+      <Property Name="Student" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="CodeFirst.Models.Title">
+    <Position X="7.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAABAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Lecturer.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
